@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
 export async function connectDB() {
-    await mongoose.connect("mongodb://127.0.0.1:27017/carbon_crunch");
+    await mongoose.connect(process.env.MONGODB_URI);
     console.log("MongoDB connected");
 }
